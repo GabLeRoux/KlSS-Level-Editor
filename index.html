@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ resetLevel() }}
+
+        <div v-for="(row, i) in grid">
+            <span v-for="(cell, j) in row">
+                <INPUT v-if="cell===0" v-on:click="paint(i, j)" type="image" src="images/floor.PNG" value="">
+                <INPUT v-if="cell===1" v-on:click="paint(i, j)" type="image" src="images/wall.PNG" value="">
+            </span>
+            </BR>
+        </div>
+    </div>
+</body>
+
+</html>
