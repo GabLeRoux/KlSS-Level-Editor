@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Righteous;
+  src: url("Righteous-Regular.ttf")
+}
+
+* {
+  font-family: Righteous;
+  outline: none;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+p {
+  margin: 0px;
+  margin-bottom: -4px;
+}
+
+#score {
+  margin: 8px;
+}
+
+.grid {line-height: 14px;}

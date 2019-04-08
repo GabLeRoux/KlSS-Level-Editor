@@ -14,12 +14,16 @@ var app = new Vue({
                     this.grid[i][j] = 1;
             }
         },
+        getTileUrl: function (id) {
+            return "./images/tile" + id + ".png";
+        },
         selectBrush: function (id) {
             this.brushId = id;
         },
         paint: function (x, y) {
             console.log(x + " " + y);
-            this.grid[x][y] = this.brushId;
+            Vue.set(this.grid[x], y, 0);
+            Vue.set(this.grid, x, this.grid[x]);
         },
         export: function () {
             // TODO: use data from tile to generate text for level file
